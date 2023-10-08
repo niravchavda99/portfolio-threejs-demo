@@ -127,7 +127,7 @@ export const technologies: Technology[] = [
   },
 ];
 
-export interface Experience {
+export interface WorkExperience {
   title: string;
   companyName: string;
   icon: string;
@@ -136,7 +136,7 @@ export interface Experience {
   points: string[];
 }
 
-export const experiences: Experience[] = [
+export const experiences: WorkExperience[] = [
   {
     title: "React.js Developer",
     companyName: "Starbucks",
