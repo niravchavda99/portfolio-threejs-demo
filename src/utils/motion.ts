@@ -58,7 +58,7 @@ export const zoomIn = (delay: unknown, duration: unknown) => {
   };
 };
 
-export const slideIn = (direction: unknown, type: unknown, delay: unknown, duration: unknown) => {
+export const slideIn = (direction: string, type: string, delay: number, duration: number) => {
   return {
     hidden: {
       x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
@@ -74,7 +74,7 @@ export const slideIn = (direction: unknown, type: unknown, delay: unknown, durat
         ease: "easeOut",
       },
     },
-  };
+  } as Variants;
 };
 
 export const staggerContainer = (staggerChildren?: unknown, delayChildren?: unknown) => {
