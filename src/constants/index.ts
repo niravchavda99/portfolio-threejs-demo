@@ -23,7 +23,12 @@ import jobit from '../assets/jobit.png';
 import tripguide from '../assets/tripguide.png';
 import threejs from '../assets/tech/threejs.svg';
 
-export const navLinks = [
+export interface NavLink {
+  id: string;
+  title: string;
+}
+
+export const navLinks: NavLink[] = [
   {
     id: "about",
     title: "About",
@@ -38,13 +43,18 @@ export const navLinks = [
   },
 ];
 
-const services = [
+export interface Service {
+  title: string;
+  icon: string;
+}
+
+export const services: Service[] = [
   {
     title: "Web Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Java Developer",
     icon: mobile,
   },
   {
@@ -52,12 +62,17 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Angular/React Developer",
     icon: creator,
   },
 ];
 
-const technologies = [
+export interface Technology {
+  name: string;
+  icon: string;
+}
+
+export const technologies: Technology[] = [
   {
     name: "HTML 5",
     icon: html,
@@ -112,10 +127,19 @@ const technologies = [
   },
 ];
 
-const experiences = [
+export interface Experience {
+  title: string;
+  companyName: string;
+  icon: string;
+  iconBg: string;
+  date: string;
+  points: string[];
+}
+
+export const experiences: Experience[] = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
+    companyName: "Starbucks",
     icon: starbucks,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
@@ -128,7 +152,7 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
+    companyName: "Tesla",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
@@ -141,7 +165,7 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
+    companyName: "Shopify",
     icon: shopify,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
@@ -154,7 +178,7 @@ const experiences = [
   },
   {
     title: "Full stack Developer",
-    company_name: "Meta",
+    companyName: "Meta",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
@@ -167,7 +191,15 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+export interface Testimonial {
+  testimonial: string;
+  name: string;
+  designation: string;
+  company: string;
+  image: string;
+}
+
+export const testimonials: Testimonial[] = [
   {
     testimonial:
         "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
@@ -194,7 +226,21 @@ const testimonials = [
   },
 ];
 
-const projects = [
+
+export interface ProjectTag {
+  name: string;
+  color: string;
+}
+
+export interface Project {
+  name: string;
+  description: string;
+  tags: ProjectTag[];
+  image: string;
+  sourceCodeLink: string;
+}
+
+export const projects: Project[] = [
   {
     name: "Car Rent",
     description:
@@ -214,7 +260,7 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    sourceCodeLink: "https://github.com/",
   },
   {
     name: "Job IT",
@@ -235,7 +281,7 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    sourceCodeLink: "https://github.com/",
   },
   {
     name: "Trip Guide",
@@ -256,8 +302,6 @@ const projects = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    sourceCodeLink: "https://github.com/",
   },
 ];
-
-export {services, technologies, experiences, testimonials, projects};
