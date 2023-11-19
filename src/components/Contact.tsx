@@ -14,8 +14,8 @@ interface ContactForm {
 
 const Contact = () => {
   const formRef = useRef<any>();
-  const [form, setForm] = useState<ContactForm>({name: '', email: '', message: ''});
-  const [loading, setLoading] = useState<boolean>(false);
+  const [form] = useState<ContactForm>({name: '', email: '', message: ''});
+  const [loading] = useState<boolean>(false);
 
   const handleChange = () => {
   };
